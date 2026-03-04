@@ -15,7 +15,7 @@ with st.sidebar:
         
         # Faz o enquadramento: Recorta o centro da imagem em formato quadrado (1:1)
         # Isso evita que ela fique esticada e foca no seu rosto
-        img_centrada = ImageOps.fit(img, (400, 400), centering=(0.5, 0.2)) # 0.2 foca mais no topo (rosto)
+        img_centrada = ImageOps.fit(img, (300, 300), centering=(0.5, 0.2)) # 0.2 foca mais no topo (rosto)
         
         # Exibe com use_container_width para manter a nitidez proporcional ao menu
         st.image(img_centrada, use_container_width=True)
@@ -157,3 +157,4 @@ elif pagina_selecionada == "Formação & Experiência":
     pagina_formacao_experiencia()
 elif pagina_selecionada == "Skills":
     pagina_skills()
+
