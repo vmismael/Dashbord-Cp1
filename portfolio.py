@@ -12,10 +12,12 @@ with st.sidebar:
         img = Image.open("WhatsApp Image 2026-03-04 at 16.59.02.jpeg")
         
         largura, altura = img.size
-        novo_tamanho = (int(largura / 1.5), int(altura / 1.5))
-        img_zoom = ImageOps.fit(img, novo_tamanho, centering=(0.5, 0.15))
+        zoom = 1.5
+        novo_tamanho = (int(largura / zoom), int(altura / zoom))
         
-        st.image(img_zoom, use_container_width=True)
+        img_processada = ImageOps.fit(img, (400, 400), centering=(0.5, 0.15))
+        
+        st.image(img_processada, width=400)
     except:
         st.error("⚠️ Erro ao carregar imagem.")
         
