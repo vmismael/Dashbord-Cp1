@@ -64,8 +64,10 @@ def pagina_formacao_experiencia():
     
     st.subheader("Formação Acadêmica")
     st.markdown("- **Engenharia de Software** - FIAP *(Cursando)*")   
-    st.markdown("- **EB-24 - Intensive 24 Business** - LSI Auckland *(Jan/2024)*")   
-    st.markdown("- **Curso de Francês** - France Langue, Paris *(Jan/2023)*")   
+    st.markdown("- **EB-24 - Intensive 24 Business** - LSI Auckland *(Jan/2024)*")
+    st.markdown("- **Administração - Incompleto** - Ibmec *(Jan/2023 - Dez/2023)*") 
+    st.markdown("- **Curso de Francês** - France Langue, Paris *(Dez/2022)*") 
+    st.markdown("- **Medicina - Incompleto** - Uninove *(Jan/2020 - Dez/2022)*") 
     st.markdown("- **Business Course** - Cats Academy Boston *(Dez/2019)*")   
     st.markdown("- **Ensino Médio** - Koelle *(Dez/2018)*")   
     
@@ -154,5 +156,6 @@ elif pagina_selecionada == "Formação & Experiência":
     pagina_formacao_experiencia()
 elif pagina_selecionada == "Skills":
     pagina_skills()
+
 
 
