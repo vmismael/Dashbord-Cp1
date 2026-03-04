@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image, ImageOps
 
 st.set_page_config(
     page_title="Portfólio | Vitor Montemor Ismael",
@@ -6,10 +7,19 @@ st.set_page_config(
     layout="wide"
 )
 
+# ---------------- BARRA LATERAL ----------------
 with st.sidebar:
     try:
-        st.image("WhatsApp Image 2026-03-04 at 16.59.02.jpeg", width=200)
-    except:
+        # Carrega a imagem original
+        img = Image.open("WhatsApp Image 2026-03-04 at 16.59.02.jpeg")
+        
+        # Faz o enquadramento: Recorta o centro da imagem em formato quadrado (1:1)
+        # Isso evita que ela fique esticada e foca no seu rosto
+        img_centrada = ImageOps.fit(img, (400, 400), centering=(0.5, 0.2)) # 0.2 foca mais no topo (rosto)
+        
+        # Exibe com use_container_width para manter a nitidez proporcional ao menu
+        st.image(img_centrada, use_container_width=True)
+    except Exception as e:
         st.error("⚠️ Erro ao carregar imagem.")
         
     st.markdown("### Vitor Montemor Ismael")
@@ -24,6 +34,7 @@ with st.sidebar:
     st.write("---")
     st.caption("© 2026 - Vitor Montemor Ismael")   
 
+# ---------------- PÁGINAS ----------------
 def pagina_home():
     st.title("Bem-vindo ao meu Portfólio")
     st.markdown("### Olá! Eu sou o **Vitor Montemor Ismael**")
@@ -139,6 +150,7 @@ def pagina_skills():
     with c6:
         st.info("Trabalho em equipe")
 
+# ---------------- ROTEAMENTO ----------------
 if pagina_selecionada == "Home":
     pagina_home()
 elif pagina_selecionada == "Formação & Experiência":
