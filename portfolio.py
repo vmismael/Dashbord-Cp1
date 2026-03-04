@@ -12,7 +12,7 @@ with st.sidebar:
         img = Image.open("WhatsApp Image 2026-03-04 at 16.59.02.jpeg")
         
         largura, altura = img.size
-        zoom = 1.5
+        zoom = 2
         novo_tamanho = (int(largura / zoom), int(altura / zoom))
         
         img_processada = ImageOps.fit(img, (400, 400), centering=(0.5, 0.15))
@@ -154,3 +154,4 @@ elif pagina_selecionada == "Formação & Experiência":
     pagina_formacao_experiencia()
 elif pagina_selecionada == "Skills":
     pagina_skills()
+
