@@ -1,15 +1,17 @@
 import streamlit as st
 
-# ---------------- CONFIGURAÇÃO DA PÁGINA ----------------
 st.set_page_config(
     page_title="Portfólio | Vitor Montemor Ismael",
     page_icon="📊",
     layout="wide"
 )
 
-# ---------------- BARRA LATERAL ----------------
 with st.sidebar:
-    st.image("https://avatars.githubusercontent.com/u/163008825?v=4", width=160)
+    try:
+        st.image("WhatsApp Image 2026-03-04 at 16.59.02.jpeg", width=200)
+    except:
+        st.error("⚠️ Erro ao carregar imagem.")
+        
     st.markdown("### Vitor Montemor Ismael")
     st.caption("Estudante de Engenharia de Software")
     
@@ -20,14 +22,12 @@ with st.sidebar:
     )
     
     st.write("---")
-    st.caption("Portfólio Individual")   
-    st.caption("© 2025 - Vitor Montemor Ismael")   
+    st.caption("© 2026 - Vitor Montemor Ismael")   
 
-# ---------------- PÁGINAS ----------------
 def pagina_home():
     st.title("Bem-vindo ao meu Portfólio")
     st.markdown("### Olá! Eu sou o **Vitor Montemor Ismael**")
-    st.write("Aqui você encontrará informações sobre minha trajetória acadêmica, experiências e habilidades técnicas.")
+    st.write("Aqui você encontrará informações sobre minha trajetória acadêmica, experiências e competências técnicas no desenvolvimento de software.")
     st.markdown("---")
     
     col1, col2 = st.columns(2)
@@ -55,10 +55,8 @@ def pagina_formacao_experiencia():
     
     st.subheader("Formação Acadêmica")
     st.markdown("- **Engenharia de Software** - FIAP *(Cursando)*")   
-    st.markdown("- **EB-24 - Intensive 24 Business** - LSI Auckland *(Jan/2024)*")
-    st.markdown("- **Administração - Incompleto** - IBMEC *(Jan/2023 - Dez/2023)*")
-    st.markdown("- **Curso de Francês** - France Langue, Paris *(Dez/2023)*") 
-    st.markdown("- **Medicina - Incompleto** - UNINOVE *(Jan/2020 - Dez/2023)*")
+    st.markdown("- **EB-24 - Intensive 24 Business** - LSI Auckland *(Jan/2024)*")   
+    st.markdown("- **Curso de Francês** - France Langue, Paris *(Jan/2023)*")   
     st.markdown("- **Business Course** - Cats Academy Boston *(Dez/2019)*")   
     st.markdown("- **Ensino Médio** - Koelle *(Dez/2018)*")   
     
@@ -66,11 +64,11 @@ def pagina_formacao_experiencia():
     st.subheader("Cursos de Aprimoramento")
     with st.expander("Ver cursos concluídos"):
         st.markdown("""
-        - **Design Thinking** - FIAP (2024)   
-        - **Gestão Financeira de Empresas** - FIAP (2024)   
-        - **Formação Full stack JavaScript** - ALURA (2024)   
-        - **Formação Social e Sustentabilidade** - FIAP (2024)   
-        - **Formação Python com Orientação a Objetos** - ALURA (2024)   
+        - **Design Thinking** (2024)   
+        - **Gestão Financeira de Empresas** (2024)   
+        - **Formação Full stack JavaScript** (2024)   
+        - **Formação Social e Sustentabilidade** (2024)   
+        - **Formação Python com Orientação a Objetos** (2024)   
         """)
 
 def pagina_skills():
@@ -78,7 +76,6 @@ def pagina_skills():
     st.markdown("---")
     
     st.subheader("Tecnologias e Programação")
-    st.caption("Principais linguagens e frameworks que utilizo")
     
     col1, col2 = st.columns(2)
     with col1:
@@ -97,9 +94,7 @@ def pagina_skills():
         st.progress(65)
     
     st.markdown("---")
-    
-    st.subheader("Ferramentas, Frameworks e Metodologias")
-    st.caption("Ambientes, frameworks e conceitos que domino")
+    st.subheader("Ferramentas e Metodologias")
     
     col1, col2 = st.columns(2)
     with col1:
@@ -114,9 +109,7 @@ def pagina_skills():
         st.markdown("- Programação Orientada a Objetos\n- Design Thinking\n- Metodologias Ágeis (Scrum)")
     
     st.markdown("---")
-    
     st.subheader("Idiomas")
-    st.caption("Níveis de proficiência")
     
     st.write("**Português (Nativo)**")
     st.progress(100)
@@ -128,9 +121,7 @@ def pagina_skills():
     st.progress(40)
     
     st.markdown("---")
-    
     st.subheader("Soft Skills")
-    st.caption("Competências interpessoais e características profissionais")
     
     c1, c2, c3 = st.columns(3)
     with c1:
@@ -148,11 +139,9 @@ def pagina_skills():
     with c6:
         st.info("Trabalho em equipe")
 
-# ---------------- ROTEAMENTO ----------------
 if pagina_selecionada == "Home":
     pagina_home()
 elif pagina_selecionada == "Formação & Experiência":
     pagina_formacao_experiencia()
 elif pagina_selecionada == "Skills":
     pagina_skills()
-
