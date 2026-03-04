@@ -20,7 +20,7 @@ with st.sidebar:
     )
     
     st.write("---")
-    st.caption("Projeto CP1 - Portfólio Individual - FIAP")   
+    st.caption("Portfólio Individual")   
     st.caption("© 2025 - Vitor Montemor Ismael")   
 
 # ---------------- PÁGINAS ----------------
@@ -55,8 +55,10 @@ def pagina_formacao_experiencia():
     
     st.subheader("Formação Acadêmica")
     st.markdown("- **Engenharia de Software** - FIAP *(Cursando)*")   
-    st.markdown("- **EB-24 - Intensive 24 Business** - LSI Auckland *(Jan/2024)*")   
-    st.markdown("- **Curso de Francês** - France Langue, Paris *(Jan/2023)*")   
+    st.markdown("- **EB-24 - Intensive 24 Business** - LSI Auckland *(Jan/2024)*")
+    st.markdown("- **Administração - Incompleto** - IBMEC *(Jan/2023 - Dez/2023)*")
+    st.markdown("- **Curso de Francês** - France Langue, Paris *(Dez/2023)*") 
+    st.markdown("- **Medicina - Incompleto** - UNINOVE *(Jan/2020 - Dez/2023)*")
     st.markdown("- **Business Course** - Cats Academy Boston *(Dez/2019)*")   
     st.markdown("- **Ensino Médio** - Koelle *(Dez/2018)*")   
     
@@ -153,3 +155,4 @@ elif pagina_selecionada == "Formação & Experiência":
     pagina_formacao_experiencia()
 elif pagina_selecionada == "Skills":
     pagina_skills()
+
