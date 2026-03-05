@@ -68,7 +68,7 @@ def pagina_formacao_experiencia():
     st.markdown("- **Administração - Incompleto** - Ibmec *(Jan/2023 - Dez/2023)*") 
     st.markdown("- **Curso de Francês** - France Langue, Paris *(Dez/2022)*") 
     st.markdown("- **Medicina - Incompleto** - Uninove *(Jan/2020 - Dez/2022)*") 
-    st.markdown("- **Business Course** - Cats Academy Boston *(Dez/2019)*")   
+    st.markdown("- **Business Course** - Cats Academy Boston *(Jan/2019 - Jul/2019)*")   
     st.markdown("- **Ensino Médio** - Koelle *(Dez/2018)*")  
 
     st.markdown("---")
