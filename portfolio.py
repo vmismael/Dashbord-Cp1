@@ -75,6 +75,7 @@ def pagina_formacao_experiencia():
     
     st.subheader("Experiência")
     st.markdown("- **Auxiliar Adminstrativo** - Laboratório Paulista – Rio Claro *(Nov/2025 - Fev/2026)*")
+    st.markdown("- **Finalist** - Next – Sao Paulo *(Nov/2025)*")
     
     st.markdown("---")
     st.subheader("Cursos de Aprimoramento")
